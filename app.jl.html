@@ -1,0 +1,35 @@
+<header>
+    <h3>Julia package documentation chat</h3>
+    <h3></h3>
+</header>
+<div id="i3ol" class="row">
+    <!-- Ensure the row takes full height and uses flexbox -->
+    <div id="io73" class="st-col col-12 col-sm st-module">
+        <!-- Full height and scroll for first column -->
+        <div id="scrollingDiv" v-if="history!=[]">
+            <h6 id="il2av">History</h6>
+            <div looper="" iscomposite="true" id="i25rl" v-for="pair in history">
+                <markdown-card id="iflsk" title="Question">{{pair[0]}}</markdown-card>
+                <markdown-card id="iawvn" title="Answer">{{pair[1]}}</markdown-card>
+            </div>
+            <div id="ikoo5" v-for="pair in history"></div>
+        </div>
+        <div id="chatInputContainer">
+            <q-input id="iy5x" label="Enter question" v-model="question"></q-input>
+            <q-btn id="iklm9" color="primary" icon="message" label="Submit" :loading="submit" v-on:click="submit = true; "></q-btn>
+        </div>
+    </div>
+    <div id="i1lal-2" class="st-col st-module col-2">
+        <div>
+            <h6>Settings</h6>
+            <q-select id="ia0jr-2" v-model="model" label="Model" :options="model_options"></q-select>
+            <q-select id="i6vp3-2" label="Packages" :options="packages" v-model="index_in_use"></q-select>
+            <q-input id="irrxt-2" v-model="openai_key" :dense="true" label="OpenAI key" type="password"></q-input>
+            <q-btn id="iov4z-2" color="primary" icon="inventory" label="Build index" v-on:click="build_index = true" :loading="build_index" :dense="true"></q-btn>
+            <p></p>
+            <h6 id="iepi7-2">Stats</h6>
+        </div>
+        <st-big-number id="i4df1" :number="total_tokens" title="Total Tokens"></st-big-number>
+        <st-big-number id="ik4ij" :number="total_cost" title="Total Cost"></st-big-number>
+    </div>
+</div>
