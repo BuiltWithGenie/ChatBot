@@ -1,5 +1,7 @@
 # AIHelpUI
 
+**Notice**: the looper and Markdown components used during the webinar will be made available shortly. The app is still completely usable inside Genie Builder without these two components.
+
 This app implements a web UI for the package [AIHelpMe.jl](https://github.com/svilupp/AIHelpMe.jl). This package lets you index the documentation from loaded Julia packages and ask questions about them using GPT
 
 
