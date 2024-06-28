@@ -1,6 +1,10 @@
 # AIHelpUI
 
-**Notice**: the looper and Markdown components used during the webinar will be made available shortly. The app is still completely usable inside Genie Builder without these two components.
+**Notice**: 
+
+- The looper and Markdown components used during the webinar will be made available shortly. The app is still completely usable inside Genie Builder without these two components.
+- The app requires the [StippleMarkdown](https://github.com/GenieFramework/StippleMarkdown.jl) package which is pending registration
+- The app assumes an env variable `OPENAI_API_KEY`exists. If it doesn't, define it or edit the code in `app.jl` loading this key.
 
 This app implements a web UI for the package [AIHelpMe.jl](https://github.com/svilupp/AIHelpMe.jl). This package lets you index the documentation from loaded Julia packages and ask questions about them using GPT
 
