@@ -1,4 +1,4 @@
-# AIHelpUI
+# Genie chat bot
 
 **Notice**: 
 
